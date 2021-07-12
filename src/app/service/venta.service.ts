@@ -10,11 +10,8 @@ export class VentaService {
   ventaURL = "http://localhost:8080/venta";
   constructor(private httpClient: HttpClient) { }
 
-  public getAllVentas():Observable<Venta>{
-    return this.httpClient.get<Venta>(`${this.ventaURL}/listar`);
+  public getAllVentas():Observable<Venta[]>{
+    return this.httpClient.get<Venta[]>(`${this.ventaURL}/listar`);
   }
 
-  getV(){
-    return this.httpClient.get(`${this.ventaURL}/listar`)
-  }
 }

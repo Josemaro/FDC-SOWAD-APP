@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { VentaComponent } from './venta/venta.component';
 import { CardComponent } from './card/card.component';
+import { ListComponent } from './components/list/list.component';
 
 
 
@@ -16,7 +17,8 @@ import { CardComponent } from './card/card.component';
     HeaderComponent,
     UsuarioComponent,
     VentaComponent,
-    CardComponent
+    CardComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
