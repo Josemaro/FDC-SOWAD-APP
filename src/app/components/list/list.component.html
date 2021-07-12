@@ -1,13 +1,13 @@
 
 
-<h3>Usuarios con Ventas</h3>
-<ul>
+<h3 style="margin-left: 15mm;margin-top: 10mm;">Usuarios con Ventas</h3>
+<ul style="margin-left: 25mm;">
     <li *ngFor = "let venta of ventas">
         {{venta.usuario.nombre}}
     </li>
 </ul>
 
-<button type = "button" (click) = "setHabilitar()" class="btn btn-primary my-3">{{habilitar==true?'Ocultar':'Mostrar'}}</button>
+<button type = "button" (click) = "setHabilitar()" class="btn btn-primary my-3" style="margin-left: 5mm;">{{habilitar==true?'Ocultar':'Mostrar'}}</button>
 <div class = 'card'>
     <ul class="list-group" *ngIf="habilitar==true">
         <div class="card-body">
@@ -43,4 +43,3 @@
     </ul>   
     
 </div>
-
