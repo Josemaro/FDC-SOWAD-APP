@@ -16,14 +16,9 @@ export class AppComponent {
 
   ventas: Venta[] = [];
   
-  constructor(private ventaService : VentaService){
-
-  }
   
   ngOnInit(): void {
-    this.ventaService.getAllVentas().subscribe(data => {
-      console.log(this.ventas);
-    })
+
   }
 
 
