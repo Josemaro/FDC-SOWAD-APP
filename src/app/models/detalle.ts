@@ -1,4 +1,4 @@
-export interface detalle{
+export interface Detalle{
     cantidad: number,
     descuento: number,
     idarticulo: number,
