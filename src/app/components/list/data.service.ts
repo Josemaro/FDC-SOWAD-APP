@@ -6,13 +6,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DataService {
-  private urlAPI =  "http://localhost:8080/venta/listar"
+  private urlAPI =  "http://localhost:8080/venta"
   constructor(private http: HttpClient) {
 
   }
 
   getAllVentas():Observable<Venta[]>{
-    return this.http.get<Venta[]>(this.urlAPI)
+    return this.http.get<Venta[]>(this.urlAPI+"/listar")
   }
 
 }

@@ -1,6 +1,6 @@
 
 
-
+<h3>Usuarios con Ventas</h3>
 <ul>
     <li *ngFor = "let venta of ventas">
         {{venta.usuario.nombre}}
@@ -10,8 +10,37 @@
 <button type = "button" (click) = "setHabilitar()" class="btn btn-primary my-3">{{habilitar==true?'Ocultar':'Mostrar'}}</button>
 <div class = 'card'>
     <ul class="list-group" *ngIf="habilitar==true">
-    <section id='ventasSection'>
-        <case-card *ngFor="let venta of ventas" [venta]="venta"></case-card>
-    </section>
+        <div class="card-body">
+            <div class="text-center" id="proTeamScroll" tabindex="2" style="height: 400px; overflow: hidden; outline: none;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>IdPersona</th>
+                            <th>Nombre</th>
+                            <th>Numero Documento</th>
+                            <th>IdVenta</th>
+                            <th>Comprobante</th>
+                            <th># Comprobante</th>
+                            <th>Total S/.</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let venta of ventas" class="text-center">
+                            <td>{{venta?.usuario?.idusuario}}</td>
+                            <td>{{venta?.usuario?.nombre}}</td>
+                            <td>{{venta?.usuario?.num_documento}}</td>
+                            <td>{{venta?.idventa}}</td>
+                            <td>{{venta?.tipocomprobante}}</td>
+                            <td>{{venta?.numcomprobante}}</td>
+                            <td>{{venta?.total}}</td>
+                            <td>{{venta?.fecha}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </ul>   
+    
 </div>
+
