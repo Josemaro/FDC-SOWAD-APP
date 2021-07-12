@@ -8,9 +8,9 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { VentaComponent } from './venta/venta.component';
 import { CardComponent } from './card/card.component';
 import { ListComponent } from './components/list/list.component';
-
-
-
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,11 +18,14 @@ import { ListComponent } from './components/list/list.component';
     UsuarioComponent,
     VentaComponent,
     CardComponent,
-    ListComponent
+    ListComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

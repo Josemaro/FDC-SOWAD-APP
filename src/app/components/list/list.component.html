@@ -1,13 +1,22 @@
 
 
-<h3 style="margin-left: 15mm;margin-top: 10mm;">Usuarios con Ventas</h3>
-<ul style="margin-left: 25mm;">
-    <li *ngFor = "let venta of ventas">
-        {{venta.usuario.nombre}}
-    </li>
-</ul>
+
+
+<div class="container">
+    <h3>Busqueda (Usuario - Comprobante - Fecha) CASO 29</h3>
+    <div class="row">
+        <div class="form-group">
+            <input type="text" class="form-control" name = "filterVentas" placeholder="Buscar..." [(ngModel)]="filterVentas">
+        </div>
+    </div>
+</div>
+
+
 
 <button type = "button" (click) = "setHabilitar()" class="btn btn-primary my-3" style="margin-left: 5mm;">{{habilitar==true?'Ocultar':'Mostrar'}}</button>
+<button type = "button" class="btn btn-primary my-3" style="margin-left: 5mm;">Boleta</button>
+<button type = "button" class="btn btn-primary my-3" style="margin-left: 5mm;">Factura</button>
+<button type = "button" class="btn btn-primary my-3" style="margin-left: 5mm;">Fecha</button>
 <div class = 'card'>
     <ul class="list-group" *ngIf="habilitar==true">
         <div class="card-body">
@@ -26,7 +35,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let venta of ventas" class="text-center">
+                        <tr *ngFor="let venta of ventas | filter:filterVentas" class="text-center">
                             <td>{{venta?.usuario?.idusuario}}</td>
                             <td>{{venta?.usuario?.nombre}}</td>
                             <td>{{venta?.usuario?.num_documento}}</td>
