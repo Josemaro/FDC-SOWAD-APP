@@ -13,5 +13,11 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.dataSvc.getAllVentas().subscribe(data => console.log(this.ventas = data))
   }
-
+  
+  habilitar: boolean = true;
+  
+  setHabilitar():void {
+    this.habilitar = (this.habilitar==true)?false:true;
+  }
+  
 }

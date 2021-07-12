@@ -11,13 +11,13 @@ export class VentaComponent implements OnInit{
 
   listax: string[] = ['Jose','Roland','Kevin','Diego'];
 
-  habilitar: boolean = true;
-  
+
 
   @Input()
   ventas: Venta[] = []
 
-
+  habilitar: boolean = true;
+  
   setHabilitar():void {
     this.habilitar = (this.habilitar==true)?false:true;
   }
